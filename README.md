@@ -33,12 +33,12 @@ A Python-based system monitoring tool that tracks CPU usage, RAM usage, and disk
 Clone the repository and enter the project directory:
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/sandrastanali/system_health_monitor .git
 cd system-health-monitor
 ```
 
 Create and activate a virtual environment:
-
+!
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
