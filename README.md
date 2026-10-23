@@ -2,7 +2,9 @@
 
 ## Overview
 
-A Python-based system monitoring tool that tracks CPU usage, RAM usage, and disk usage. It displays measurements in the terminal, records them in a log file, and generates warnings when resource usage reaches configured thresholds.
+System Health Monitor is a Python-based monitoring tool that tracks CPU usage, memory consumption, and disk usage. It displays system resource measurements in the terminal, records monitoring information in a log file, and generates warnings when resource usage reaches configured thresholds.
+
+This project demonstrates practical Linux, Python, logging, and version control skills relevant to DevOps engineering.
 
 ## Features
 
@@ -11,7 +13,8 @@ A Python-based system monitoring tool that tracks CPU usage, RAM usage, and disk
 * Disk usage monitoring
 * Configurable resource usage thresholds
 * Timestamped logging
-* Warnings for high resource usage
+* Warnings when resource usage exceeds configured thresholds
+* Linux and Ubuntu environment support
 
 ## Technologies Used
 
@@ -19,32 +22,42 @@ A Python-based system monitoring tool that tracks CPU usage, RAM usage, and disk
 * psutil
 * Linux / Ubuntu
 * Python logging module
-* Git and GitHub (for version control and project hosting)
+* Git and GitHub
 
-## Requirements
+## Prerequisites
 
-* Python 3
-* pip
-* A Linux environment or WSL Ubuntu
-* psutil
+Before running the project, ensure you have:
+
+* Python 3 installed
+* pip installed
+* Git installed
+* Linux, Ubuntu, or WSL with Ubuntu
+* Access to a terminal
 
 ## Installation
 
-Clone the repository and enter the project directory:
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/sandrastanali/system_health_monitor .git
-cd system-health-monitor
+git clone https://github.com/sandrastanali/system_health_monitor.git
+cd system_health_monitor
 ```
 
-Create and activate a virtual environment:
-!
+### 2. Create a virtual environment
+
 ```bash
 python3 -m venv .venv
+```
+
+### 3. Activate the virtual environment
+
+On Linux or Ubuntu:
+
+```bash
 source .venv/bin/activate
 ```
 
-Install the dependency:
+### 4. Install dependencies
 
 ```bash
 python3 -m pip install psutil
@@ -52,18 +65,56 @@ python3 -m pip install psutil
 
 ## Usage
 
-Run the monitoring script:
+Run the monitoring program:
 
 ```bash
 python3 cpu_monitor.py
 ```
 
+The program monitors system resource usage and displays measurements in the terminal.
+
 Press `Ctrl+C` to stop monitoring.
 
 ## Logging
 
-The program records CPU, RAM, and disk usage in `system_health.log`, including timestamps and warning messages when configured thresholds are exceeded.
+The monitoring program records system resource measurements and may generate warnings when resource usage exceeds configured thresholds.
+
+The log filename and location depend on the logging configuration in the project.
+
+## Project Structure
+
+| File                | Purpose                                                      |
+| ------------------- | ------------------------------------------------------------ |
+| `README.md`         | Project documentation and usage instructions                 |
+| `cpu_monitor.py`    | Python-based system monitoring                               |
+| `monitor.conf`      | Monitoring configuration                                     |
+| `system_monitor.sh` | Bash-based system monitoring                                 |
+| `parse_logs.sh`     | Log parsing and analysis                                     |
+| `calms_summary.md`  | Summary of the CALMS framework and its application to DevOps |
 
 ## Learning Objectives
 
-This project demonstrates introductory Python scripting, Linux command-line usage, system resource monitoring, logging, and automation concepts relevant to DevOps.
+This project provides practical experience with:
+
+* Python scripting and system monitoring
+* Linux command-line operations
+* Resource measurement and logging
+* Configuration management
+* Git branching and version control
+* GitHub collaboration and Pull Requests
+* DevOps principles and automation
+
+## Future Improvements
+
+Possible enhancements include:
+
+* Automated testing
+* Continuous integration with GitHub Actions
+* Improved error handling
+* Automated monitoring schedules
+* More detailed monitoring reports
+* Notifications when resource usage exceeds configured thresholds
+
+## Author
+
+Developed as a learning project to practise system administration, Python programming, and DevOps engineering.
